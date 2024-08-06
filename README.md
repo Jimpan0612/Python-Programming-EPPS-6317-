@@ -26,7 +26,7 @@ This course, taught by Dr. Bryan Chastain at The University of Texas at Dallas, 
   - Prompts the user for a directory to search for CSVs.
   - Searches through all child directories and prints contents of each CSV found.
   - Ensures the script does not crash if the directory does not exist or if no CSV files are found.
-
+ 
 ## Final Project
 
 ### Data Analysis and Visualization Dashboard
@@ -46,6 +46,12 @@ This course, taught by Dr. Bryan Chastain at The University of Texas at Dallas, 
 2. **Financial Data Analysis**
    - **Financial Metric Comparison**: Bar chart comparing selected financial metrics between TSMC and Samsung.
    - **Total Assets Trend**: Line chart showing the trend of total assets over the years for both companies.
+  
+## Dashboard preview
+
+![Screenshot 1](screenshots/finalphoto1.png)
+![Screenshot 2](screenshots/finalphoto2.png)
+![Screenshot 3](screenshots/finalphoto3.png)
 
 ### Example Code Snippets
 
@@ -63,3 +69,39 @@ fig = px.line(
     template='plotly',
     hover_data={'Intensity': True, 'Event Date': '|%B %d, %Y'}
 )
+```
+#### Geopolitical Events Map
+```python
+fig = px.scatter_geo(
+    filtered_data_map,
+    lat='Latitude',
+    lon='Longitude',
+    text='Intensity',
+    color='Intensity',
+    size='Intensity',
+    hover_name='Event Text',
+    hover_data=['Source Country', 'Target Country'],
+    animation_frame='Event Date',
+    title=f'Geopolitical Events Map - Year {selected_year}',
+    projection='natural earth',
+    size_max=25,
+    color_continuous_scale='Viridis',
+    range_color=[0, 20],
+    height=800,
+    width=1000,
+)
+```
+
+#### Financial Metric Comparison
+```python
+fig = px.bar(
+    combined_df,
+    x='Year',
+    y=[f'TSMC {selected_metric}', f'Samsung {selected_metric}'],
+    title=f'{selected_metric} - TSMC vs Samsung - All Years',
+    labels={'value': selected_metric, 'variable': 'Company'},
+    color='Company',
+    facet_col='Company',
+    facet_col_spacing=0.1
+)
+```
