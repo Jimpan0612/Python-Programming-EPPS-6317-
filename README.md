@@ -30,21 +30,32 @@ This course, taught by Dr. Bryan Chastain at The University of Texas at Dallas, 
 ## Final Project
 
 ### Data Analysis and Visualization Dashboard
-- **Main Program**: `Data Analysis and Visualization.ipynb`
-  - **Description**: The notebook includes a comprehensive data analysis and visualization dashboard. The first half of the code is for testing and experimentation, and the second half contains the full version of the dashboard code and a segmented version of the dashboard code.
-  
-### Geo Data Filter
-- **Program**: `geo data filter EA.ipynb` located in `geo data/geo data east asia/`
-  - **Description**: This program cleans and merges all geo events data.
 
-### Data Files
-- **Geo Data**: Contains the geo events data and the data cleaning program.
-- **Samsung Financial Data**: Contains the Samsung data and the data cleaning program.
-- **TSMC Financial Data**: Contains the TSMC data and the data cleaning program.
+**Description**: Developed a comprehensive data analysis and visualization dashboard using Dash and Plotly to present financial and geopolitical data.
 
-### Features
-- Created a data analysis and visualization dashboard using Python.
-- Cleaned and merged data from various sources.
-- Used visualization tools to present the data effectively.
+**Features**:
+- **Data Integration**: Merged financial data from TSMC and Samsung, and geopolitical event data for East Asia.
+- **Visualization**:
+  - Line chart showing daily intensity trend of geopolitical events.
+  - Interactive geopolitical events map.
+  - Comparative bar chart for financial metrics of TSMC and Samsung.
+  - Total assets line chart for TSMC and Samsung.
 
----
+### Financial Data Visualization
+- **TSMC and Samsung Financial Data**: Visualized financial data of TSMC and Samsung from CSV files.
+- **Dashboard Example**:
+  ![Financial Comparison Chart](images/financial_comparison_chart.png)
+  ![Total Assets Chart](images/total_assets_chart.png)
+
+### Geopolitical Event Analysis
+- **Geopolitical Events in East Asia**: Visualized geopolitical events with a focus on event intensity.
+- **Dashboard Example**:
+  ![Geopolitical Map](images/geopolitical_map.png)
+  ![Daily Intensity Chart](images/daily_intensity_chart.png)
+
+## Setup Instructions
+
+1. **Clone the repository**:
+   ```sh
+   git clone https://github.com/Jimpan0612/Python-Programming-EPPS-6317-.git
+   cd Python-Programming-EPPS-6317-
