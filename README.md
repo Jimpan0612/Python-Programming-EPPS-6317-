@@ -46,6 +46,12 @@ This course, taught by Dr. Bryan Chastain at The University of Texas at Dallas, 
 2. **Financial Data Analysis**
    - **Financial Metric Comparison**: Bar chart comparing selected financial metrics between TSMC and Samsung.
    - **Total Assets Trend**: Line chart showing the trend of total assets over the years for both companies.
+  
+## Dashboard preview
+
+![Screenshot 1](screenshots/finalphoto1.png)
+![Screenshot 2](screenshots/finalphoto2.png)
+![Screenshot 3](screenshots/finalphoto3.png)
 
 ### Example Code Snippets
 
