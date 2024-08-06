@@ -30,32 +30,68 @@ This course, taught by Dr. Bryan Chastain at The University of Texas at Dallas, 
 ## Final Project
 
 ### Data Analysis and Visualization Dashboard
+- **Description**: Created a comprehensive data analysis and visualization dashboard using Python, Plotly, and Dash. The dashboard integrates financial data from TSMC and Samsung, as well as geopolitical event data for East Asia.
+- **Features**:
+  - **Geopolitical Events Dashboard**: Visualizes daily relationship intensity trends and geopolitical events on a map.
+  - **Financial Data Comparison**: Compares financial metrics (Total Assets, Total Liabilities, and Total Liabilities and Equity) between TSMC and Samsung over the years.
+  - **Interactive Components**: Includes dropdowns for selecting years and financial metrics, and displays detailed event lists and financial comparisons.
 
-**Description**: Developed a comprehensive data analysis and visualization dashboard using Dash and Plotly to present financial and geopolitical data.
+### Main Components
 
-**Features**:
-- **Data Integration**: Merged financial data from TSMC and Samsung, and geopolitical event data for East Asia.
-- **Visualization**:
-  - Line chart showing daily intensity trend of geopolitical events.
-  - Interactive geopolitical events map.
-  - Comparative bar chart for financial metrics of TSMC and Samsung.
-  - Total assets line chart for TSMC and Samsung.
+1. **Geopolitical Events Visualization**
+   - **Daily Intensity Trend**: Line chart showing the trend of relationship intensity over time.
+   - **Geopolitical Events Map**: Scatter geo map visualizing geopolitical events with intensity and location.
+   - **Event List**: List of top events for the selected date.
 
-### Financial Data Visualization
-- **TSMC and Samsung Financial Data**: Visualized financial data of TSMC and Samsung from CSV files.
-- **Dashboard Example**:
-  ![Financial Comparison Chart](images/financial_comparison_chart.png)
-  ![Total Assets Chart](images/total_assets_chart.png)
+2. **Financial Data Analysis**
+   - **Financial Metric Comparison**: Bar chart comparing selected financial metrics between TSMC and Samsung.
+   - **Total Assets Trend**: Line chart showing the trend of total assets over the years for both companies.
 
-### Geopolitical Event Analysis
-- **Geopolitical Events in East Asia**: Visualized geopolitical events with a focus on event intensity.
-- **Dashboard Example**:
-  ![Geopolitical Map](images/geopolitical_map.png)
-  ![Daily Intensity Chart](images/daily_intensity_chart.png)
+### Example Code Snippets
 
-## Setup Instructions
+#### Daily Intensity Trend
+```python
+fig = px.line(
+    daily_intensity_sum,
+    x='Event Date',
+    y='Intensity',
+    title=f'Daily Relationship Intensity Trend - Year {selected_year}',
+    labels={'Intensity': 'Daily Intensity Sum', 'Event Date': 'Date'},
+    line_shape='linear',
+    render_mode='svg',
+    markers=True,
+    template='plotly',
+    hover_data={'Intensity': True, 'Event Date': '|%B %d, %Y'}
+)
 
-1. **Clone the repository**:
-   ```sh
-   git clone https://github.com/Jimpan0612/Python-Programming-EPPS-6317-.git
-   cd Python-Programming-EPPS-6317-
+# Geopolitical Events Map
+fig = px.scatter_geo(
+    filtered_data_map,
+    lat='Latitude',
+    lon='Longitude',
+    text='Intensity',
+    color='Intensity',
+    size='Intensity',
+    hover_name='Event Text',
+    hover_data=['Source Country', 'Target Country'],
+    animation_frame='Event Date',
+    title=f'Geopolitical Events Map - Year {selected_year}',
+    projection='natural earth',
+    size_max=25,
+    color_continuous_scale='Viridis',
+    range_color=[0, 20],
+    height=800,
+    width=1000,
+)
+
+# Financial Metric Comparison
+fig = px.bar(
+    combined_df,
+    x='Year',
+    y=[f'TSMC {selected_metric}', f'Samsung {selected_metric}'],
+    title=f'{selected_metric} - TSMC vs Samsung - All Years',
+    labels={'value': selected_metric, 'variable': 'Company'},
+    color='Company',
+    facet_col='Company',
+    facet_col_spacing=0.1
+)
