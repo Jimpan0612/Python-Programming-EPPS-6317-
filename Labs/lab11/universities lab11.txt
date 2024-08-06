@@ -1,0 +1,84 @@
+Step 1: Remove HTML tags
+Find: <.*?>
+Replace: (Leave it empty)
+
+Step 2: Remove leading whitespaces and empty lines
+Find: ^\s*|\s*$
+Replace: (Leave it empty)
+
+Step 3: Remove '&nbsp;'
+Find: &nbsp;
+Replace: \n
+
+Step 4: Remove phone numbers like "(972) 860-4883"
+Find: \(\d{3}\)\s*\d{3}-\d{4}
+Replace: (Leave it empty)
+
+Step 5: Extract university name and address
+Find: (.+?)\s*(\d{5}-\d{4}|\(\d{3}\)\s*\d{3}-\d{4}|\(\d{3}\)\s*\d{7}|\d{10})
+Replace: \1\t\2
+
+
+
+Addresses and Phone Numbers of all Colleges Schools Universities in the area code 214
+Amberton University1700 Eastgate DrGarland, TX	75041-5511 
+Amberton UniversityMesquite, TX 75149 
+Baylor University Executive MBA Program12230 Preston Rd Dallas, TX	75230-2223 
+Brookhaven College3939 Valley View Ln Dallas, TX	75244-4997 
+Brookhaven Community College3939 Valley View Ln Dallas, TX	75244-4997 
+Cedar Valley Community College3030 Dallas St Dallas, TX	75215-3017 
+Cedar Valley Community College3030 N Dallas Ave Lancaster, TX	75134-3799 
+
+Collin College2800 E Spring Creek Pkwy Plano, TX	75074-3388 
+
+Collin College9700 Wade Blvd Frisco, TX	75035-2117 
+
+Collin College2200 W University Dr Mc Kinney, TX	75070-2999 
+Dallas Baptist University18333 Preston Rd Dallas, TX	75252-5466 
+Dallas Baptist University707 W Avenue D Garland, TX	75040-7001 
+Dallas Baptist UniversityIrving, TX 75037
+Dallas County Community College18204 Marsh Ln Carrollton, TX 75006 
+Dallas County Community College DistrictDallas, TX 75221 
+Dallas County Community College District5001 N MacArthur Blvd Irving, TX	75038-3804 
+Dallas County Community College District9596 Walnut St Dallas, TX	75243-2112 
+Dallas County Community College District9596 Walnut St Richardson, TX 75080 
+Devry Institute of Technology4800 Regent Blvd Irving, TX	75063-2439 
+
+Eastfield
+ CollegeDallas, TX 75221 
+
+Eastfield College3737 Motley Dr Mesquite, TX	75150-2099 
+Education America Dallas Campus9330 Lyndon B Johnson Fwy Dallas, TX	75243-3436 
+El Centro Community CollegeRichardson, TX 75080 
+Garland Bible College2004 16th St Garland, TX	75041-1508 
+Grambling State University 7334 Pecan Ridge Dr Dallas, TX	75237-3604 
+Le Tourneau University5710 Lyndon B Johnson Fwy Dallas, TX	75240-6324 
+Miller Rd Baptist Academy2004 16th St Garland, TX	75041-1508 
+Montessori Academy401 S Jupiter Rd Allen, TX	75002-3042 
+
+Navarro College3200 W. 7th AvenueCorsicana, TX 75110 
+
+North Central Texas College1026 W Main St Lewisville, TX	75067-3633 
+North Lake
+ College5001 N MacArthur Blvd Irving, TX	75038-3899 
+Northwood University1114 W Fm 1382 Cedar Hill, TX	75104-1204 
+Our Lady of the Lake University3939 Valley View Ln Dallas, TX	75244-4906
+
+Parker University2500 Walnut Hill Ln Dallas, TX	75229-5609 
+
+Priest Bill J Institute For Economic Development4343 Highway 67 Mesquite, TX	75150-2018 
+Richland CollegeRichardson, TX 75080 
+Richland College12800 Abrams Rd Richardson, TX 75080 
+Southern Methodist University5236 Tennyson Pkwy Plano, TX	75024-3541 
+Southwestern Assemblies of God University1200 Sycamore St Waxahachie, TX	75165-2397 
+Southwestern Christian College - Swcc Campus Terrell, TX 75160 
+
+Texas A &amp; M University At Dallas17360 Coit Rd Dallas, TX	75252-6599 
+
+Trinity Valley Community College - Terrell Campus1200 Interstate 20Terrell, TX 75160 
+University of Dallas2301 Ohio Dr Plano, TX	75093-3927 
+University of Dallas3113 University Ave Irving, TX	75037-0001 
+University of Dallas1202 E Arapaho Rd Richardson, TX	75081-2400 
+University of Dallas At Plano2301 Ohio Dr Plano, TX	75093-3927 
+University of Texas At ArlingtonGrand Prairie, TX 75051 
+University of Texas At Dallas2601 N Floyd Rd Richardson, TX	75080-1407
