@@ -63,8 +63,9 @@ fig = px.line(
     template='plotly',
     hover_data={'Intensity': True, 'Event Date': '|%B %d, %Y'}
 )
-
-# Geopolitical Events Map
+```
+#### Geopolitical Events Map
+```python
 fig = px.scatter_geo(
     filtered_data_map,
     lat='Latitude',
@@ -83,8 +84,10 @@ fig = px.scatter_geo(
     height=800,
     width=1000,
 )
+```
 
-# Financial Metric Comparison
+#### Financial Metric Comparison
+```python
 fig = px.bar(
     combined_df,
     x='Year',
@@ -95,3 +98,4 @@ fig = px.bar(
     facet_col='Company',
     facet_col_spacing=0.1
 )
+```
